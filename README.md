@@ -4,7 +4,6 @@
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.5-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.x-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **SIDMS** is a full-stack, production-grade **identity and profile management system** built with security at its core. It delivers enterprise-level features including email verification, OTP-based multi-factor authentication, JWT stateless sessions, role-based access control (RBAC), AES-256 field-level encryption, comprehensive audit logging, and secure key management through environment variables.
 
@@ -23,7 +22,6 @@
 - [API Endpoints](#-api-endpoints)
 - [Folder Structure](#-folder-structure)
 - [Future Enhancements](#-future-enhancements)
-- [License](#-license)
 
 ---
 
@@ -81,22 +79,22 @@ SIDMS follows a clean, layered separation of concerns:
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                     React Frontend                          │
-│  (Pages → Context API → Fetch API → REST Endpoints)        │
+│  (Pages → Context API → Fetch API → REST Endpoints)         │
 └──────────────────────────┬──────────────────────────────────┘
                            │ HTTP (JSON)
 ┌──────────────────────────▼──────────────────────────────────┐
-│                    Controller Layer                          │
+│                    Controller Layer                         │
 │  AuthController · MemberProfileController · AdminController │
 ├─────────────────────────────────────────────────────────────┤
-│                     Service Layer                            │
+│                     Service Layer                           │
 │  AuthService · MemberProfileService · OtpService            │
 │  EmailService · AuditLogService · VerificationTokenService  │
 ├─────────────────────────────────────────────────────────────┤
-│                   Repository Layer (JPA)                     │
+│                   Repository Layer (JPA)                    │
 │  UserRepository · OtpRepository · MemberProfileRepository   │
 │  AuditLogRepository · VerificationTokenRepository           │
 ├─────────────────────────────────────────────────────────────┤
-│                     MySQL Database                           │
+│                     MySQL Database                          │
 │  users · otps · member_profiles · audit_logs                │
 │  verification_tokens                                        │
 └─────────────────────────────────────────────────────────────┘
@@ -195,7 +193,7 @@ Stored Data ──▶ Base64 Decode ──▶ AES-256-GCM Decrypt ──▶ Plai
 │ username (UNIQUE)   │   │   │ token (UNIQUE)          │
 │ email (UNIQUE)      │   └───│ user_id (FK → users)    │
 │ password (hashed)   │       │ expiry_date             │
-│ role (ENUM)         │       │ used (BOOLEAN)           │
+│ role (ENUM)         │       │ used (BOOLEAN)          │
 │ enabled (BOOLEAN)   │       └─────────────────────────┘
 │ created_at          │
 └──────────┬──────────┘       ┌─────────────────────────┐
@@ -444,12 +442,6 @@ SIDMS/
 - [ ] **Password Reset** — Self-service password recovery via email
 - [ ] **Two-Factor App Support** — TOTP-based MFA via authenticator apps (Google Authenticator, Authy)
 - [ ] **Admin Dashboard** — Web-based admin panel for user and audit log management
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
