@@ -1,0 +1,8 @@
+/* ── App Shell ────────────────────────────────────── */
+/* All page-level layout (centering, backgrounds) is
+   handled by individual page components.  This file
+   only provides a full-width, full-height flex wrapper
+   so each page can fill the viewport.                */
+
+/* intentionally minimal — no max-width or padding
+   constraints on #root (handled in index.css)        */

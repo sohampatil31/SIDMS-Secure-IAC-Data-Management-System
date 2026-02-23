@@ -1,0 +1,316 @@
+/* ── Profile Form Styles ──────────────────────────── */
+
+.profile-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 2rem 1rem;
+}
+
+.profile-card {
+    background: rgba(30, 41, 59, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    border-radius: 16px;
+    padding: 2.5rem 2.5rem 2rem;
+    width: 100%;
+    max-width: 640px;
+    box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.35),
+        0 0 60px rgba(99, 102, 241, 0.06);
+    animation: profileFadeIn 0.5s ease-out;
+}
+
+@keyframes profileFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Header ──────────────────────────────────────── */
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-header-icon {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.profile-header h1 {
+    color: #f1f5f9;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+    letter-spacing: -0.02em;
+}
+
+.profile-header p {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* ── Form Layout ─────────────────────────────────── */
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.profile-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.profile-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.profile-form .form-group label {
+    color: #cbd5e1;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.profile-form .form-group input[type="text"],
+.profile-form .form-group input[type="email"],
+.profile-form .form-group input[type="tel"] {
+    width: 100%;
+    padding: 0.65rem 0.875rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 10px;
+    color: #f1f5f9;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.profile-form .form-group input::placeholder {
+    color: #64748b;
+}
+
+.profile-form .form-group input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* ── Skills Dropdown ─────────────────────────────── */
+
+.skills-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.65rem 0.875rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 10px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    user-select: none;
+}
+
+.skills-dropdown.open {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.skills-selected {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #cbd5e1;
+}
+
+.skills-dropdown .skills-selected:only-child {
+    color: #64748b;
+}
+
+.skills-arrow {
+    font-size: 0.65rem;
+    margin-left: 0.5rem;
+    color: #64748b;
+}
+
+.skills-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    border-radius: 10px;
+    padding: 0.625rem;
+    margin-top: 0.375rem;
+    max-height: 200px;
+    overflow-y: auto;
+    animation: fadeIn 0.15s ease-out;
+}
+
+.skills-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    color: #cbd5e1 !important;
+    font-size: 0.8125rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+}
+
+.skills-option:hover {
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.skills-option input[type="checkbox"] {
+    accent-color: #6366f1;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+/* ── File Upload ─────────────────────────────────── */
+
+.file-upload-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.file-upload-input {
+    display: none;
+}
+
+.file-upload-btn {
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px dashed rgba(148, 163, 184, 0.3);
+    border-radius: 10px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.file-upload-btn:hover {
+    border-color: #6366f1;
+    color: #a5b4fc;
+}
+
+.file-upload-name {
+    color: #4ade80;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* ── Submit Button ───────────────────────────────── */
+
+.profile-submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    letter-spacing: 0.01em;
+    margin-top: 0.5rem;
+}
+
+.profile-submit-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+}
+
+.profile-submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.profile-submit-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* ── Messages (reuse login-message class) ────────── */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.login-message {
+    padding: 0.7rem 0.875rem;
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-align: center;
+    animation: fadeIn 0.25s ease-out;
+}
+
+.login-message.success {
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    color: #4ade80;
+}
+
+.login-message.error {
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    color: #f87171;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+
+@media (max-width: 580px) {
+    .profile-card {
+        padding: 2rem 1.25rem;
+    }
+
+    .profile-row {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-options {
+        grid-template-columns: 1fr;
+    }
+}

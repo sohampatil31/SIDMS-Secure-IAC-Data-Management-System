@@ -1,0 +1,28 @@
+/* ── Register Page Overrides ─────────────────────── */
+/* Extends Login.css — uses .login-page, .login-card,
+   .login-brand, .login-form, .form-group, .login-btn,
+   .login-message for consistent theme.                */
+
+@import "./Login.css";
+
+.register-card {
+    max-width: 420px;
+}
+
+.register-footer {
+    text-align: center;
+    margin-top: 1.25rem;
+    color: #94a3b8;
+    font-size: 0.8125rem;
+}
+
+.register-link {
+    color: #818cf8;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.register-link:hover {
+    color: #a5b4fc;
+}

@@ -1,0 +1,22 @@
+/* ── OTP Page — Extra Styles ──────────────────────── */
+
+.otp-input {
+    text-align: center;
+    font-size: 1.25rem !important;
+    letter-spacing: 0.35em;
+    font-weight: 600;
+}
+
+.otp-back-btn {
+    background: transparent;
+    border: 1px solid rgba(148, 163, 184, 0.2) !important;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.otp-back-btn:hover:not(:disabled) {
+    background: rgba(148, 163, 184, 0.08);
+    box-shadow: none;
+    transform: none;
+}

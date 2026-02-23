@@ -1,0 +1,24 @@
+/* ── Verify Email Page Overrides ─────────────────── */
+
+@import "./Login.css";
+
+.verify-card {
+    max-width: 420px;
+    text-align: center;
+}
+
+.verify-footer {
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+.register-link {
+    color: #818cf8;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.register-link:hover {
+    color: #a5b4fc;
+}
