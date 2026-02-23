@@ -21,7 +21,6 @@
 - [Environment Variables](#-environment-variables)
 - [API Endpoints](#-api-endpoints)
 - [Folder Structure](#-folder-structure)
-- [Future Enhancements](#-future-enhancements)
 
 ---
 
@@ -430,19 +429,6 @@ SIDMS/
 │       └── utils/
 │           └── apiClient.js             # Centralized API client
 ```
-
----
-
-## 🔮 Future Enhancements
-
-- [ ] **Account Lockout** — Lock accounts after repeated failed login attempts
-- [ ] **Rate Limiting** — Throttle API requests to prevent brute-force attacks
-- [ ] **Refresh Tokens** — Implement token refresh for seamless session management
-- [ ] **Cloud Deployment** — Docker containerization and deployment to AWS / Azure / GCP
-- [ ] **Password Reset** — Self-service password recovery via email
-- [ ] **Two-Factor App Support** — TOTP-based MFA via authenticator apps (Google Authenticator, Authy)
-- [ ] **Admin Dashboard** — Web-based admin panel for user and audit log management
-
 ---
 
 <p align="center">
